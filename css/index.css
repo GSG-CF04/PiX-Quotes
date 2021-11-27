@@ -1,0 +1,26 @@
+@font-face { /* Bold font */
+    font-family: 'Futura bd';
+    src: url('../assets/fonts/Futura-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Futura-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face { /* medium font */
+    font-family: 'Futura md';
+    src: url('../assets/fonts/FuturaBT-Medium.woff2') format('woff2'),
+        url('../assets/fonts/FuturaBT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face { /* light font */
+    font-family: 'Futura lt';
+    src: url('../assets/fonts/FuturaBT-Light.woff2') format('woff2'),
+        url('../assets/fonts/FuturaBT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

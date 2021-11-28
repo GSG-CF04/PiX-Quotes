@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Fearlessly';
+    src: url('../assets/fonts/Fearlessly-Regular.woff2') format('woff2'),
+        url('../assets/fonts/Fearlessly-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Bold';
+    src: url('../assets/fonts/Futura-Bold.woff2') format('woff2'),
+        url('../assets/fonts/Futura-Bold.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Light';
+    src: url('../assets/fonts/FuturaBT-Light.woff2') format('woff2'),
+        url('../assets/fonts/FuturaBT-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Medium';
+    src: url('../assets/fonts/FuturaBT-Medium.woff2') format('woff2'),
+        url('../assets/fonts/FuturaBT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

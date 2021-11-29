@@ -1,4 +1,4 @@
-# ♣ PiX & Quotes
+# ♠ PiX & Quotes
 
 PiX&Quotes offers the best wallpapers ready to download or you can make yours with an endless great captions with just a click.
 
@@ -10,8 +10,8 @@ PiX&Quotes offers the best wallpapers ready to download or you can make yours wi
 
 * [About](#about)
 * [API Doc](#API)
+* [The purpose of the project (the problem and the solution)](#purpose)
 * [User journey & UI Design](#Userjourney)
-* [The purpose of the App (the problem and the solution)](#purpose)
 * [Features](#features)
 * [style guide](#style-guide)
 * [How do I get this project on my machine?](#clone)
@@ -45,8 +45,29 @@ An API gives a list of photos according to your search query
 
 You can visit here  [Imsea](https://imsea.herokuapp.com/)
 
+<br>
 
-# ♥ User journey <span id="Userjourney"></span>
+# ♠ The purpose of this application <span id="purpose"></span>
+
+
+**The problem**
+
+* Many people who like pictures that contain quotes or texts may find it difficult to edit pictures or add texts to them in an appropriate way, or even to choose a good quote and also the problem of finding suitable pictures with high quality.
+
+<br>
+
+**The solution**
+
+* Our application provides the user with endless suggestions of quotes or high-quality images with the possibility of switching between images or quotes and changing them separately.Also downloading them in their original quality or even placing them in the favorites to download them at a later time. 
+
+* The user can also use a text or quote of his own.
+
+* The application works on the phone or Desktop and provides images for each device size
+
+<br><br>
+
+
+# ♠ User journey <span id="Userjourney"></span>
 
 your journy as a user in <b> Pix&Quotes </b> well be so easy and joyfull.
 From your first step inside the website, which has a wonderful and modern design.
@@ -84,24 +105,7 @@ You can take a look on the figma design here  [Figma UI design](https://www.figm
 
 <br><br>
 
-# ♣ The purpose of this application <span id="purpose"></span>
 
-
-**The problem**
-
-Many people who like pictures that contain quotes or texts may find it difficult to edit pictures or add texts to them in an appropriate way, or even to choose a good quote and also the problem of finding suitable pictures with high quality.
-
-<br>
-
-**The solution**
-
-* Our application provides the user with endless suggestions of quotes or high-quality images with the possibility of switching between images or quotes and changing them separately.Also downloading them in their original quality or even placing them in the favorites to download them at a later time. 
-
-* The user can also use a text or quote of his own.
-
-* The application works on the phone or Desktop and provides images for each device size
-
-<br><br>
 # ♠ Features <span id="features"></span>
 
 * As a user, you'll be able to download any image as a wallpaper to your phone, tablet or desktop.
@@ -116,14 +120,14 @@ Many people who like pictures that contain quotes or texts may find it difficult
 
 <br>
 
-# ♣ Style Guide <span id="style-guide"></span>
+# ♠ Style Guide <span id="style-guide"></span>
 
 <img style="width:450px" src="https://i.ibb.co/dLm2ngK/style-guide.png">
 
 
 <br>
 
-# ♦ Programing Languages Used in this Project
+# ♠ Programing Languages Used in this Project
 
 Languages and technologies we did use in this project:
 
@@ -137,7 +141,7 @@ Languages and technologies we did use in this project:
 
 
 
-# ♥ How do I get the project on my local machine? <span id="clone"></span>
+# ♠ How can I get the project on my local machine? <span id="clone"></span>
 
 Just follow these simple steps:
 

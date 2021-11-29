@@ -11,6 +11,7 @@ PiX&Quotes offers the best wallpapers ready to download or you can make yours wi
 * [About](#about)
 * [API Doc](#API)
 * [User journey & UI Design](#Userjourney)
+* [The purpose of the App (the problem and the solution)](#purpose)
 * [Features](#features)
 * [style guide](#style-guide)
 * [How do I get this project on my machine?](#clone)
@@ -50,6 +51,11 @@ You can visit here  [Imsea](https://imsea.herokuapp.com/)
 your journy as a user in <b> Pix&Quotes </b> well be so easy and joyfull.
 From your first step inside the website, which has a wonderful and modern design.
 
+
+**Project wireframes**
+
+<img src="https://i.ibb.co/QcbHQhh/wireframes.png">
+
 <br>
 
 **UI design**
@@ -69,7 +75,7 @@ You can take a look on the figma design here  [Figma UI design](https://www.figm
 
 1. Then he shall be referred to another page containing the image he choosed to download it to his device.
 
-1. back to the home page he should be able to choose any cat. He is interested in from the home-page to navigate to the category section then to the download.
+1. back to the home page he should be able to choose any category. He is interested in from the home-page to navigate to the category section then to the download.
 
 1. The user also should be able to find a generate icon at the bottom of the home-page that will enable him to generate a random image with a random caption that he can also download to his device.
 
@@ -78,18 +84,34 @@ You can take a look on the figma design here  [Figma UI design](https://www.figm
 
 <br><br>
 
+# ♣ The purpose of this application <span id="purpose"></span>
 
 
+**The problem**
+
+Many people who like pictures that contain quotes or texts may find it difficult to edit pictures or add texts to them in an appropriate way, or even to choose a good quote and also the problem of finding suitable pictures with high quality.
+
+<br>
+
+**The solution**
+
+* Our application provides the user with endless suggestions of quotes or high-quality images with the possibility of switching between images or quotes and changing them separately.Also downloading them in their original quality or even placing them in the favorites to download them at a later time. 
+
+* The user can also use a text or quote of his own.
+
+* The application works on the phone or Desktop and provides images for each device size
+
+<br><br>
 # ♠ Features <span id="features"></span>
 
 * As a user, you'll be able to download any image as a wallpaper to your phone, tablet or desktop.
 * As a user, you'll be able to choose any category in which you choose the wallpaper.
-* As a user, you'll be able to generate a random wallpaper with a random image and a random on it.
+* As a user, you'll be able to generate a random wallpaper with a random image and a random quote on it.
 * As a user, you'll be able to download the image with the caption as one photo.
 * As a user, you'll be able to change the caption alone if you don't like it.
 * As a user, you'll be able to write your own caption.
 * As a user, you'll be able to change the image alone if you don't like it.
-* As a user, you'll be able to save any combination of images and captions in the favorites secrion.
+* As a user, you'll be able to save any combination of images and captions in the favorites section.
 * Your favorites will be saved even if you closed the browser.
 
 <br>

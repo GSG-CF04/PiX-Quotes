@@ -51,6 +51,47 @@
     <title>Generate</title>
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        <img id="logo" src="assets/imgs/logo.svg" alt="Logo" />
+        <p class="sub-title">The home of wallpapers</p>
+      </header>
+
+      <div class="navbar">
+        <button class="navbar-btns" type="submit">Home</button>
+        <button class="navbar-btns" type="submit">Generate</button>
+        <button class="navbar-btns" type="submit">Favorites</button>
+      </div>
+
+      <main>
+        <img
+          id="wallpaper-sample"
+          src="assets/imgs/sample.png"
+          alt="wallpaper sample"
+        />
+
+        <input type="text" id="quote-input" placeholder="Enter Your quote" />
+
+        <button id="generate-btn" type="submit">Generate</button>
+      </main>
+      <footer>
+        <img
+          class="footer-btns"
+          src="assets/icons/home.svg"
+          alt="Home Button"
+        />
+        <img
+          class="footer-btns"
+          src="assets/icons/generate-clicked.svg"
+          alt="Generate Button"
+        />
+        <img
+          class="footer-btns"
+          src="assets/icons/bookmark.svg"
+          alt="Favorites Button"
+        />
+      </footer>
+    </div>
     <script src="js/generate.js"></script>
   </body>
 </html>

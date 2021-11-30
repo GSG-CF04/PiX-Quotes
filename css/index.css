@@ -17,18 +17,20 @@ h2{
 }
 /* category buttons */
 .category {
+
     display: flex;
     flex-direction: row;
-    margin-top: -20%;
+    margin-top: 50px;
     flex-wrap: wrap;
-    
+    width: auto;
+    height: 200px;
 }
 #abstract-btn{
     width: 150px;
     height: 50px;
     margin-left: 20px;
-    margin-top: 139px;
-    background:url("/assets/imgs/abstract.jpg") ;
+    
+    background:url("../assets/imgs/abstract.jpg") ;
     background-size: 100% ;
     background-position: 50%;
     color: white;
@@ -40,8 +42,8 @@ h2{
     width: 150px;
     height: 50px;
     margin-left: 20px;
-    margin-top: 139px;
-    background:url("/assets/imgs/nature.jpg") ;
+   
+    background:url("../assets/imgs/nature.jpg") ;
     background-size:100%;
     background-position: 50%;
     color: white;
@@ -52,8 +54,8 @@ h2{
     width: 150px;
     height: 50px;
     margin-left: 20px;
-    margin-top: 20px;
-    background:url("/assets/imgs/cosmo.jpg") ;
+   
+    background:url("../assets/imgs/cosmo.jpg") ;
     background-size:100%;
     background-position: 50%;
     color: white;
@@ -64,8 +66,7 @@ h2{
     width: 150px;
     height: 50px;
     margin-left: 20px;
-    margin-top: 20px;
-    background:url("/assets/imgs/minimal.jpg") ;
+    background:url("../assets/imgs/minimal.jpg") ;
     background-size:100%;
     background-position: 50%;
     color: white;

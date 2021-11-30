@@ -2,6 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #D9D9D9;
+    flex-wrap: wrap;
 }
 /* Header */
 #appsicon {
@@ -13,4 +14,67 @@ h2{
     font-family: Futura Medium;
     margin-left: 20px;
     font-size: 20px;
+}
+/* category buttons */
+.category {
+
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    width: auto;
+    height: 200px;
+}
+#abstract-btn{
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    background:url("../assets/imgs/abstract.jpg") ;
+    background-size: 100% ;
+    background-position: 50%;
+    color: white;
+    font-size: 20px ;
+    cursor: pointer;
+    border : none ;
+    border-radius : 15px;
+}
+
+#nature-btn{
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    background:url("../assets/imgs/nature.jpg") ;
+    background-size:100%;
+    background-position: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border : none ;
+    border-radius : 15px;
+}
+#cosmo-btn{
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    background:url("../assets/imgs/cosmo.jpg") ;
+    background-size:100%;
+    background-position: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border : none ;
+    border-radius : 15px;
+}
+#minimal-btn{
+    width: 150px;
+    height: 50px;
+    margin-left: 20px;
+    background:url("../assets/imgs/minimal.jpg") ;
+    background-size:100%;
+    background-position: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    border : none ;
+    border-radius : 15px;
 }

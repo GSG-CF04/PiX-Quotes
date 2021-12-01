@@ -1,0 +1,159 @@
+* {
+  font-family: "Futura Medium";
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #d9d9d9;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 60px; /* footer's height */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 20px 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#wallpaper-sample {
+  width: 130px;
+  border-radius: 13px;
+  border: 7px solid #b96a6a;
+  box-shadow: 0px 0px 20px#03030330;
+}
+
+#quote-input {
+  border: 2px solid #cecece;
+  margin: 20px 0px;
+  width: 240px;
+  height: 45px;
+  border-radius: 13px;
+  padding-left: 10px;
+}
+
+#generate-btn {
+  width: 150px;
+  height: 45px;
+  border: none;
+  background-color: #b96a6a;
+  border-radius: 13px;
+  color: white;
+  font-family: "Futura Bold";
+}
+
+/*---------- Nav Bar ---------- */
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #cecece;
+  margin: 10px 0px;
+}
+
+.navbar-btns {
+  display: none;
+  width: 90px;
+  height: 35px;
+  border: none;
+  background-color: #b9b9b9;
+  border-radius: 13px;
+  color: black;
+  font-family: "Futura Bold";
+  margin: 10px;
+}
+
+.navbar-btns:nth-child(2) {
+  background-color: #b96a6a;
+  color: white;
+}
+
+/*---------- footer ---------- */
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  background-color: #b96a6a;
+  height: 60px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 22px 22px 0px 0px;
+}
+
+.footer-btns {
+  height: 30px;
+}
+
+footer > button {
+  background-color: transparent;
+  border: 0;
+}
+
+/* --------------- 2-1 Tablet Size --------------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    width: 100%;
+    align-items: center;
+  }
+  #logo {
+    width: 260px;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+  .navbar-btns {
+    display: inline-block;
+  }
+  #wallpaper-sample {
+    width: 350px;
+    height: 197px;
+    object-fit: cover;
+  }
+  footer {
+    display: none;
+  }
+}
+
+/* --------------- 2-2 Desktop Size --------------- */
+
+@media (min-width: 1023px) {
+  header {
+    width: 100%;
+    align-items: center;
+  }
+  #logo {
+    width: 20%;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+  .navbar-btns {
+    display: inline-block;
+  }
+  #wallpaper-sample {
+    width: 350px;
+    height: 197px;
+    object-fit: cover;
+  }
+  footer {
+    display: none;
+  }
+}

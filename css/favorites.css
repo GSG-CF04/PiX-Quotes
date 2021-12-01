@@ -31,6 +31,23 @@ header .logo-img {
     margin-left: 20px;
 }
 
+#my-imgs{
+    width: 150px;
+    height: 300px;
+    border-radius: 11px;
+}
+
+  /*------------grid styling--------------- */
+#my-collection{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 20px;
+    align-items: stretch;
+    justify-items: center;
+    justify-content: space-evenly
+}
+    /*------------end of grid styling--------------- */
+
 footer {
     position: fixed;
     left: 0px;
@@ -95,6 +112,17 @@ footer img{
     .nav-btns {
         display: inline-block;
     }
+
+    #my-collection{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+        align-items: stretch;
+        justify-items: center;
+        justify-content: space-evenly;
+        margin: 100px;
+        margin-top: 30px;
+    }
     footer {
         display: none;
     }
@@ -120,6 +148,18 @@ footer img{
     .nav-btns {
     display: inline-block;
     }
+
+    #my-collection{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        row-gap: 20px;
+        align-items: stretch;
+        justify-items: center;
+        justify-content: space-evenly;
+        margin: 130px;
+        margin-top: 30px;
+    }
+
     footer {
     display: none;
     }

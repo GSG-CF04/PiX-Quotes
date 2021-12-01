@@ -101,6 +101,11 @@ footer {
   height: 30px;
 }
 
+footer > button {
+  background-color: transparent;
+  border: 0;
+}
+
 /* --------------- 2-1 Tablet Size --------------- */
 
 @media (min-width: 768px) and (max-width: 1023px) {

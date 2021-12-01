@@ -9,6 +9,7 @@ minimalBtn.addEventListener("click",buttonName)
 
 
 function buttonName(event){
-    localStorage.setItem('name', event.target.name)
+    localStorage.setItem('name', event.target.textContent)
+    location.href = 'category.html'
     }
     

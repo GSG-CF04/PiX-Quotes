@@ -4,8 +4,21 @@
   margin: 0;
 }
 
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   background-color: #d9d9d9;
+}
+
+#canvas {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  object-fit: cover;
 }
 
 footer {
@@ -46,7 +59,7 @@ button:hover {
 }
 
 #download-btn {
-  background: #60B841;
+  background: #60b841;
 }
 #download-btn:hover {
   background: #539e37;

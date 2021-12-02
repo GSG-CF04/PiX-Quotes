@@ -47,10 +47,30 @@
     />
     <!-- import stylesheet & fonts -->
     <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/download.css" />
-    <title>Download</title>
+    <link rel="stylesheet" href="css/category.css" />
+    <title>category</title>
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        <img src="assets/imgs/logo.svg" alt="app-logo" id="logo-img">
+        <p>The home of wallpapers</p>
+      </header>
+      <div class="nav">  <!---- for responsive ----->
+        <button class="nav-btns"  onclick="location.href='index.html'">Home</button>
+        <button class="nav-btns"  onclick="location.href='generate.html'">Generate</button>
+        <button class="nav-btns"  onclick="location.href='favorites.html'">Favorites</button>
+      </div>
+      <section id="my-collection">
+        <img src="" id="my-imgs" />
+                <!-- images will go here after fetching from api -->
+      </section>
+      <footer>
+      <button class="icon" onclick="location.href='index.html'"><img src="assets/icons/home.svg" alt="home"/></button>
+      <button class="icon" onclick="location.href='generate.html'"><img src="assets/icons/generate.svg" alt="generate"></button>
+      <button class="icon" onclick="location.href='favorites.html'"><img src="assets/icons/bookmark.svg" alt="bookmark"></button>
+      </footer>
+    </div>
     <script src="js/download.js"></script>
   </body>
 </html>

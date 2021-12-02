@@ -1,18 +1,16 @@
 // get the device size before get the image
 
 let width = "1440";
-let height = "2960";
 
 if (window.screen.width >= 1024) {
   width = "1920";
-  height = "1080";
 } else if (window.screen.width >= 768) {
   width = "2048";
-  height = "1536";
-} else {
-  width = "1440";
-  height = "2960";
 }
+
+let height = Math.round((width * window.screen.height) / window.screen.width);
+
+console.log(height)
 
 async function generateRandomImageAndQuote() {
   // Get an image according to device size and store it's URL in the locaStorage with the key (BG)
@@ -40,7 +38,7 @@ async function generateRandomImageAndQuote() {
       if (quoteInput.value.length != 0) {
         txt = quoteInput.value;
       } else {
-        txt = res[generateRanodmNum(res.length - 1)].text;
+        txt = res[generateRanodmNum(res.length)].text;
       }
       console.log(txt);
       localStorage.setItem("quote", txt);

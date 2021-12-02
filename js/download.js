@@ -14,18 +14,14 @@ function showHideFun() {
 
 // set the canvas size according to the device screen size
 let width = "1440";
-let height = "2960";
 
 if (window.screen.width >= 1024) {
   width = "1920";
-  height = "1080";
 } else if (window.screen.width >= 768) {
   width = "2048";
-  height = "1536";
-} else {
-  width = "1440";
-  height = "2960";
 }
+
+let height = Math.round((width * window.screen.height) / window.screen.width);
 
 // get the img URL from the localStorage
 
@@ -43,10 +39,19 @@ img.onload = drawImageAndQuote.bind(null, img, ctx);
 
 // Split the quote from localStorage into multiple lines (3 words length lines)
 
-let QuoteLines = localStorage
-  .getItem("quote")
-  .match(/\b[\w']+(?:[^\w\n]+[\w']+){0,2}\b/g);
+let wordsArray = localStorage.getItem("quote").split(" ");
+let QuoteLines = [];
 
+for (i = 0; i < wordsArray.length; i += 3) {
+  QuoteLines.push(
+    `${wordsArray[i]} ${wordsArray[i + 1] ? wordsArray[i + 1] : ""} ${
+      wordsArray[i + 2] ? wordsArray[i + 2] : ""
+    }`.trim()
+  );
+}
+
+
+console.log(QuoteLines)
 // The function which draws the image and the text on the canvas
 
 function drawImageAndQuote(img, ctx) {

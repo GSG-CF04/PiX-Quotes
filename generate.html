@@ -58,9 +58,15 @@
       </header>
 
       <div class="navbar">
-        <button class="navbar-btns" type="submit">Home</button>
-        <button class="navbar-btns" type="submit">Generate</button>
-        <button class="navbar-btns" type="submit">Favorites</button>
+        <button class="navbar-btns" onclick="location.href='index.html'">
+          Home
+        </button>
+        <button class="navbar-btns" onclick="location.href='generate.html'">
+          Generate
+        </button>
+        <button class="navbar-btns" onclick="location.href='favorites.html'">
+          Favorites
+        </button>
       </div>
 
       <main>
@@ -72,24 +78,26 @@
 
         <input type="text" id="quote-input" placeholder="Enter Your quote" />
 
-        <button id="generate-btn" type="submit">Generate</button>
+        <button id="generate-btn" type="submit" onclick="generateRandomImageAndQuote()">
+          Generate
+        </button>
       </main>
       <footer>
-        <button>
+        <button onclick="location.href='index.html'">
           <img
             class="footer-btns"
             src="assets/icons/home.svg"
             alt="Home Button"
           />
         </button>
-        <button>
+        <button onclick="location.href='generate.html'">
           <img
             class="footer-btns"
             src="assets/icons/generate-clicked.svg"
             alt="Generate Button"
           />
         </button>
-        <button>
+        <button onclick="location.href='favorites.html'">
           <img
             class="footer-btns"
             src="assets/icons/bookmark.svg"

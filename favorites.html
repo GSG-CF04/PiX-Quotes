@@ -51,6 +51,26 @@
     <title>Favorites</title>
   </head>
   <body>
+    <div class="wrapper">
+      <header>
+        <img src="assets/imgs/logo.svg" alt="app-logo" id="logo-img">
+        <p>The home of wallpapers</p>
+      </header>
+      <div class="nav">  <!---- for responsive ----->
+        <button class="nav-btns"  onclick="location.href='index.html'">Home</button>
+        <button class="nav-btns"  onclick="location.href='generate.html'">Generate</button>
+        <button class="nav-btns">Favorites</button>
+      </div>
+      <section id="my-collection">
+        <img src="" id="my-imgs" />
+        <!-- images will go here after fetching from local storage -->
+      </section>
+      <footer>
+        <button class="icon" onclick="location.href='index.html'"><img src="assets/icons/home.svg" alt="home"/></button>
+        <button class="icon" onclick="location.href='generate.html'"><img src="assets/icons/generate.svg" alt="generate"></button>
+       <button class="icon"><img src="assets/icons/bookmark-clicked.svg" alt="bookmark-icon"></button>
+      </footer>
+    </div>
     <script src="js/favorites.js"></script>
   </body>
 </html>

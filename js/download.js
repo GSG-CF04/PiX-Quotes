@@ -116,3 +116,17 @@ function drawImageAndQuote(img, ctx) {
     );
   }
 }
+
+
+function saveToDevice(){
+  if (window.navigator.msSaveBlob) {
+    window.navigator.msSaveBlob(canvas.msToBlob(), "Wallpaper.jpg");
+  } else {
+    let a = document.createElement("a");
+    document.body.appendChild(a);
+    a.href = canvas.toDataURL('image/jpeg', 1.0);
+    a.download = "Wallpaper";
+    a.click();
+    document.body.removeChild(a);
+  }
+}

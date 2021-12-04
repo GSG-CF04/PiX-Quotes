@@ -175,10 +175,18 @@ function reGenerateAll() {
 }
 
 function saveToDevice() {
+  let quote = localStorage.getItem("quote");
+  let arrayOfQuoteWords = quote.split(" ");
+  let imageURL = localStorage.getItem("BG");
+  let imageId = imageURL.substring(
+    imageURL.indexOf(".jpg"),
+    imageURL.lastIndexOf("/") + 1
+  );
+
   let a = document.createElement("a");
   document.body.appendChild(a);
   a.href = canvas.toDataURL("image/jpeg", 1.0);
-  a.download = new Date().toLocaleTimeString("en-GB").replaceAll(":", "-");
+  a.download = `${arrayOfQuoteWords[0]} ${arrayOfQuoteWords[1]} ${arrayOfQuoteWords[2]} ${imageId}`;
   a.click();
   document.body.removeChild(a);
 }

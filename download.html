@@ -64,12 +64,17 @@
     <title>Download</title>
   </head>
   <body>
-    <canvas id="canvas"></canvas>
     <footer>
       <div class="secondary-btns" style="display: none">
-        <button class="re-btn" id="reText-btn">Text</button>
-        <button class="re-btn" id="reImg-btn">Image</button>
-        <button class="re-btn" id="reAll-btn">Both</button>
+        <button class="re-btn" id="reText-btn" onclick="reGenerateQuotation()">
+          Text
+        </button>
+        <button class="re-btn" id="reImg-btn" onclick="reGenerateImage()">
+          Image
+        </button>
+        <button class="re-btn" id="reAll-btn" onclick="reGenerateAll()">
+          Both
+        </button>
       </div>
 
       <div class="main-btns">

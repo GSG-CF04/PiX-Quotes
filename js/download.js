@@ -12,56 +12,60 @@ function showHideFun() {
   } else secondary_btns.style.display = "none";
 }
 
-// set the canvas size according to the device screen size
-let width = "1440";
+// Create a canvas when the page loads
 
-if (window.screen.width >= 1024) {
-  width = "1920";
-} else if (window.screen.width >= 768) {
-  width = "2048";
+function CreateCanvasWithImageAndQuote() {
+  // set the canvas size according to the device screen size
+
+  let width = "1440";
+
+  if (window.screen.width >= 1024) {
+    width = "1920";
+  } else if (window.screen.width >= 768) {
+    width = "2048";
+  }
+
+  height = Math.round((width * window.screen.height) / window.screen.width);
+
+  let img = new Image();
+  img.src = localStorage.getItem("BG");
+  img.crossOrigin = "Anonymous";
+
+  // create new canvas with the image as a background and the quote from the localStorage on it
+
+  let newcanvas = document.createElement("canvas");
+  newcanvas.setAttribute("id", "canvas");
+  newcanvas.setAttribute("width", width);
+  newcanvas.setAttribute("height", height);
+  document.body.prepend(newcanvas);
+  let canvas = document.getElementById("canvas");
+  let ctx = canvas.getContext("2d");
+  img.onload = drawImageAndQuoteInsideCanvas.bind(null, img, ctx);
 }
 
-let height = Math.round((width * window.screen.height) / window.screen.width);
-
-// get the img URL from the localStorage
-
-var img = new Image();
-img.src = localStorage.getItem("BG");
-img.crossOrigin = "Anonymous";
-
-// create canvas with the image as a background and the quote from the localStorage on it
-
-var canvas = document.getElementById("canvas");
-canvas.setAttribute("width", width);
-canvas.setAttribute("height", height);
-var ctx = canvas.getContext("2d");
-img.onload = drawImageAndQuote.bind(null, img, ctx);
-
-// Split the quote from localStorage into multiple lines (3 words length lines)
-
-let wordsArray = localStorage.getItem("quote").split(" ");
-let QuoteLines = [];
-
-for (i = 0; i < wordsArray.length; i += 3) {
-  QuoteLines.push(
-    `${wordsArray[i]} ${wordsArray[i + 1] ? wordsArray[i + 1] : ""} ${
-      wordsArray[i + 2] ? wordsArray[i + 2] : ""
-    }`.trim()
-  );
-}
-
-
-console.log(QuoteLines)
 // The function which draws the image and the text on the canvas
 
-function drawImageAndQuote(img, ctx) {
+function drawImageAndQuoteInsideCanvas(img, ctx) {
+  // Split the quote from localStorage into multiple lines (3 words length lines)
+
+  let wordsArray = localStorage.getItem("quote").split(" ");
+  let QuoteLines = [];
+
+  for (i = 0; i < wordsArray.length; i += 3) {
+    QuoteLines.push(
+      `${wordsArray[i]} ${wordsArray[i + 1] ? wordsArray[i + 1] : ""} ${
+        wordsArray[i + 2] ? wordsArray[i + 2] : ""
+      }`.trim()
+    );
+  }
+
   canvas = ctx.canvas;
 
-  var hRatio = canvas.width / img.width;
-  var vRatio = canvas.height / img.height;
-  var ratio = Math.min(hRatio, vRatio);
-  var centerShift_x = (canvas.width - img.width * ratio) / 2;
-  var centerShift_y = (canvas.height - img.height * ratio) / 2;
+  let hRatio = canvas.width / img.width;
+  let vRatio = canvas.height / img.height;
+  let ratio = Math.min(hRatio, vRatio);
+  let centerShift_x = (canvas.width - img.width * ratio) / 2;
+  let centerShift_y = (canvas.height - img.height * ratio) / 2;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.drawImage(
     img,
@@ -79,7 +83,7 @@ function drawImageAndQuote(img, ctx) {
   ctx.textAlign = "center";
   ctx.shadowColor = "black";
   ctx.shadowBlur = 17;
-  var lineheight = 50;
+  let lineheight = 50;
   ctx.font = "170px Fearlessly";
   ctx.lineWidth = 7;
   let offset = 750;
@@ -115,4 +119,57 @@ function drawImageAndQuote(img, ctx) {
       canvas.height / 2 + i * lineheight - offset
     );
   }
+}
+
+CreateCanvasWithImageAndQuote();
+
+// regenerate only the image
+
+async function reGenerateImage() {
+  // set the width and the size for the new photo
+
+  let width = "1440";
+
+  if (window.screen.width >= 1024) {
+    width = "1920";
+  } else if (window.screen.width >= 768) {
+    width = "2048";
+  }
+  height = Math.round((width * window.screen.height) / window.screen.width);
+
+  await fetch(`https://picsum.photos/${width}/${height}`)
+    .then((res) => {
+      localStorage.setItem("BG", res.url);
+    })
+    .catch((err) => err);
+
+  canvas.remove(); // remove the old canvas
+  CreateCanvasWithImageAndQuote(); // build new canvas
+}
+
+// Generate random number
+
+function generateRanodmNum(max) {
+  return Math.floor(Math.random() * max);
+}
+
+// regenerate only the quote
+
+async function reGenerateQuotation() {
+  await fetch("https://type.fit/api/quotes")
+    .then((response) => response.json())
+    .then((res) => {
+      localStorage.setItem("quote", res[generateRanodmNum(res.length)].text);
+    })
+    .catch((err) => err);
+
+  canvas.remove(); // remove the old canvas
+  CreateCanvasWithImageAndQuote(); // build new canvas
+}
+
+//  regenerate both the image and the quote
+
+function reGenerateAll() {
+  reGenerateImage();
+  reGenerateQuotation();
 }

@@ -84,7 +84,7 @@
         <button class="btn" id="regenerate-btn">
           <img src="assets/icons/re.svg" />
         </button>
-        <button class="btn" id="favorite-btn">
+        <button class="btn" id="favorite-btn" onclick="bookmark()">
           <img src="assets/icons/favorite.svg" />
         </button>
         <button class="btn" id="download-btn" onclick="saveToDevice()">
@@ -92,7 +92,9 @@
         </button>
       </div>
     </footer>
-
+    <div id="snackbar-container">
+      <div id="snackbar"></div>
+    </div>
     <script src="js/download.js"></script>
   </body>
 </html>

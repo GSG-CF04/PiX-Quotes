@@ -10,8 +10,6 @@ if (window.screen.width >= 1024) {
 
 let height = Math.round((width * window.screen.height) / window.screen.width);
 
-console.log(height)
-
 async function generateRandomImageAndQuote() {
   // Get an image according to device size and store it's URL in the locaStorage with the key (BG)
 
@@ -40,10 +38,14 @@ async function generateRandomImageAndQuote() {
       } else {
         txt = res[generateRanodmNum(res.length)].text;
       }
-      console.log(txt);
       localStorage.setItem("quote", txt);
     })
     .catch((err) => err);
+
+  // create random ID for every wallpaper
+
+  let id = new Date().valueOf();
+  localStorage.setItem("id", id);
 
   location.href = "download.html";
 }

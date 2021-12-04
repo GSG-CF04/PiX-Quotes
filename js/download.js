@@ -143,6 +143,10 @@ async function reGenerateImage() {
     })
     .catch((err) => err);
 
+  // generate new ID
+  let id = new Date().valueOf();
+  localStorage.setItem("id", id);
+
   canvas.remove(); // remove the old canvas
   CreateCanvasWithImageAndQuote(); // build new canvas
 }
@@ -163,6 +167,10 @@ async function reGenerateQuotation() {
     })
     .catch((err) => err);
 
+  // generate new ID
+  let id = new Date().valueOf();
+  localStorage.setItem("id", id);
+
   canvas.remove(); // remove the old canvas
   CreateCanvasWithImageAndQuote(); // build new canvas
 }
@@ -170,6 +178,10 @@ async function reGenerateQuotation() {
 //  regenerate both the image and the quote
 
 function reGenerateAll() {
+  // generate new ID
+  let id = new Date().valueOf();
+  localStorage.setItem("id", id);
+
   reGenerateImage();
   reGenerateQuotation();
 }
@@ -189,4 +201,42 @@ function saveToDevice() {
   a.download = `${arrayOfQuoteWords[0]} ${arrayOfQuoteWords[1]} ${arrayOfQuoteWords[2]} ${imageId}`;
   a.click();
   document.body.removeChild(a);
+}
+
+function bookmark() {
+  if (localStorage.getItem("favorites") == null) {
+    localStorage.setItem("favorites", "[]");
+  }
+
+  let img = localStorage.getItem("BG");
+  let quote = localStorage.getItem("quote");
+  let id = localStorage.getItem("id");
+
+  let list = JSON.parse(localStorage.getItem("favorites"));
+  let index = list.findIndex((item) => item.includes(id));
+
+  if (index != null && index >= 0) {
+    list.splice(index, 1);
+    localStorage.setItem("favorites", JSON.stringify(list));
+    ShowSnackBar("Removed from the bookmarkes");
+  } else {
+    list.push([img, quote, id]);
+    localStorage.setItem("favorites", JSON.stringify(list));
+    ShowSnackBar("Bookmarked");
+  }
+}
+
+function ShowSnackBar(msg) {
+  // Get the snackbar DIV
+  var x = document.getElementById("snackbar");
+
+  // show my message
+  x.textContent = msg;
+  // Add the "show" class to DIV
+  x.className = "show";
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function () {
+    x.className = x.className.replace("show", "");
+  }, 3000);
 }

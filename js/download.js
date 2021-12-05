@@ -40,7 +40,7 @@ function CreateCanvasWithImageAndQuote() {
   document.body.prepend(newcanvas);
   let canvas = document.getElementById("canvas");
   let ctx = canvas.getContext("2d");
-  img.onload = drawImageAndQuoteInsideCanvas.bind(null, img, ctx);
+  img.onload = ()=>drawImageAndQuoteInsideCanvas(img, ctx);
 }
 
 // The function which draws the image and the text on the canvas
@@ -213,7 +213,7 @@ function bookmark() {
   let id = localStorage.getItem("id");
 
   let list = JSON.parse(localStorage.getItem("favorites"));
-  let index = list.findIndex((item) => item.includes(id));
+  let index = list.findIndex((item) => item[2]===id);
 
   if (index != null && index >= 0) {
     list.splice(index, 1);

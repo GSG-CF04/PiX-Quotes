@@ -82,6 +82,7 @@ h2{
 .randomImage {
     width: 99px;
     height: auto;
+    cursor: pointer;
 }
 .cards {
     display: flex;

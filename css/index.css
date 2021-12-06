@@ -24,7 +24,7 @@ h2{
     flex-wrap: wrap;
     width: auto;
     height: 200px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 #abstract-btn{
     width: 145px;
@@ -80,11 +80,15 @@ h2{
 }
 /* random image from api */
 .randomImage {
-    width: 99px;
+    width: 140px;
     height: auto;
     cursor: pointer;
+    border-radius: 11px;
+    margin-top: 35px;
+
 }
 .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }

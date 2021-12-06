@@ -34,7 +34,7 @@ fetch(`https://imageforfinal.000webhostapp.com/api/all.php?dev=${screenType}`)
     .then(res => res.json())
     .then(data => {
         for (let i = 0; i < 12; i += 2) {
-            const figure = document.createElement("figure");
+            const figure = document.createElement("div");
             cards.appendChild(figure);
             figure.classList.add("images")
             const image = document.createElement("img")

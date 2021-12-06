@@ -92,6 +92,12 @@ h2{
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+
+button:hover {
+    cursor: pointer;
+  }
+
 /*---------- Nav Bar ---------- */
 .navbar {
     width: 100%;

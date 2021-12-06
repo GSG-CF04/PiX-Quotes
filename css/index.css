@@ -90,7 +90,8 @@ h2{
 .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-around; 
+    margin-bottom: 80px;
 }
 
 
@@ -137,6 +138,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 22px 22px 0px 0px;
+    
   }
   
   .footer-btns {

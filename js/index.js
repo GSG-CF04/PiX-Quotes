@@ -47,6 +47,7 @@ fetch(`https://imageforfinal.000webhostapp.com/api/all.php?dev=${screenType}`)
     })
 // save image url in loacalstorage and move to download page
 function download(event) {
-    localStorage.setItem('imageUrl', event.target.src)
+    localStorage.setItem('BG', event.target.src)
+    localStorage.setItem('quote',' ')
     location.href = 'download.html'
 }

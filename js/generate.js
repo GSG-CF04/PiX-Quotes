@@ -13,7 +13,7 @@ let height = Math.round((width * window.screen.height) / window.screen.width);
 async function generateRandomImageAndQuote() {
   // Get an image according to device size and store it's URL in the locaStorage with the key (BG)
 
-  await fetch(`https://picsum.photos/${width}/${height}`)
+  let x = fetch(`https://picsum.photos/${width}/${height}`)
     .then((res) => {
       localStorage.setItem("BG", res.url);
     })
@@ -41,6 +41,8 @@ async function generateRandomImageAndQuote() {
       localStorage.setItem("quote", txt);
     })
     .catch((err) => err);
+
+  await x;
 
   // create random ID for every wallpaper
 

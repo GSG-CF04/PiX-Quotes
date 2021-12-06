@@ -17,20 +17,20 @@ function buttonName(event) {
 
 
 // choose a screen the user is using 
-let screenType = "phone";
+let screenType = "M";
 
 if (window.screen.width >= 1024) {
-    screenType = "desktop"
+    screenType = "D"
 }
 else if (window.screen.width >= 768) {
-    screenType = "tablet"
+    screenType = "T"
 }
 const cards = document.createElement('div')
 cards.setAttribute('class', 'cards')
 body.appendChild(cards)
 
 //random image from api
-fetch(`https://api.codetabs.com/v1/proxy/?quest=https://imsea.herokuapp.com/api/1?q=hd%20${screenType}%20wallpapers`)
+fetch(`https://imageforfinal.000webhostapp.com/api/all.php?dev=${screenType}`)
     .then(res => res.json())
     .then(data => {
         for (let i = 0; i < 12; i += 2) {
@@ -40,7 +40,7 @@ fetch(`https://api.codetabs.com/v1/proxy/?quest=https://imsea.herokuapp.com/api/
             const image = document.createElement("img")
             figure.appendChild(image)
             image.classList.add("randomImage")
-            image.src = data.results[i];
+            image.src = data[i].img;
             figure.addEventListener("click", download)
         }
 

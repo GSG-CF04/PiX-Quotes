@@ -113,7 +113,7 @@ h2{
     margin: 10px;
   }
   
-  .navbar-btns:nth-child(2) {
+  .navbar-btns:nth-child(1) {
     background-color: #b96a6a;
     color: white;
   }

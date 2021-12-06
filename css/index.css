@@ -24,11 +24,12 @@ h2{
     flex-wrap: wrap;
     width: auto;
     height: 200px;
+    justify-content: space-around;
 }
 #abstract-btn{
-    width: 150px;
+    width: 145px;
     height: 50px;
-    margin-left: 20px;
+   
     background:url("../assets/imgs/abstract.jpg") ;
     background-size: 100% ;
     background-position: 50%;
@@ -40,9 +41,9 @@ h2{
 }
 
 #nature-btn{
-    width: 150px;
+    width: 145px;
     height: 50px;
-    margin-left: 20px;
+    
     background:url("../assets/imgs/nature.jpg") ;
     background-size:100%;
     background-position: 50%;
@@ -53,9 +54,9 @@ h2{
     border-radius : 15px;
 }
 #cosmo-btn{
-    width: 150px;
+    width: 145px;
     height: 50px;
-    margin-left: 20px;
+    
     background:url("../assets/imgs/cosmo.jpg") ;
     background-size:100%;
     background-position: 50%;
@@ -66,9 +67,8 @@ h2{
     border-radius : 15px;
 }
 #minimal-btn{
-    width: 150px;
+    width: 140px;
     height: 50px;
-    margin-left: 20px;
     background:url("../assets/imgs/minimal.jpg") ;
     background-size:100%;
     background-position: 50%;
@@ -77,4 +77,18 @@ h2{
     cursor: pointer;
     border : none ;
     border-radius : 15px;
+}
+/* random image from api */
+.randomImage {
+    width: 140px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 11px;
+    margin-top: 35px;
+
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

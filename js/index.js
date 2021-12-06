@@ -45,7 +45,8 @@ fetch(`https://api.codetabs.com/v1/proxy/?quest=https://imsea.herokuapp.com/api/
         }
 
     })
-// save image url in loacalstorage
+// save image url in loacalstorage and move to download page
 function download(event) {
     localStorage.setItem('imageUrl', event.target.src)
+    location.href = 'download.html'
 }

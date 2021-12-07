@@ -40,7 +40,7 @@ function CreateCanvasWithImageAndQuote() {
   document.body.prepend(newcanvas);
   let canvas = document.getElementById("canvas");
   let ctx = canvas.getContext("2d");
-  img.onload = ()=>drawImageAndQuoteInsideCanvas(img, ctx);
+  img.onload = () => drawImageAndQuoteInsideCanvas(img, ctx);
 }
 
 // The function which draws the image and the text on the canvas
@@ -187,18 +187,13 @@ function reGenerateAll() {
 }
 
 function saveToDevice() {
+  let id = localStorage.getItem("id");
   let quote = localStorage.getItem("quote");
   let arrayOfQuoteWords = quote.split(" ");
-  let imageURL = localStorage.getItem("BG");
-  let imageId = imageURL.substring(
-    imageURL.indexOf(".jpg"),
-    imageURL.lastIndexOf("/") + 1
-  );
-
   let a = document.createElement("a");
   document.body.appendChild(a);
   a.href = canvas.toDataURL("image/jpeg", 1.0);
-  a.download = `${arrayOfQuoteWords[0]} ${arrayOfQuoteWords[1]} ${arrayOfQuoteWords[2]} ${imageId}`;
+  a.download = `${arrayOfQuoteWords[0]} ${arrayOfQuoteWords[1]} ${arrayOfQuoteWords[2]} ${id}`;
   a.click();
   document.body.removeChild(a);
 }
@@ -208,19 +203,26 @@ function bookmark() {
     localStorage.setItem("favorites", "[]");
   }
 
+  let device = "M";
+
+  if (window.screen.width >= 1024) {
+    device = "D";
+  } else if (window.screen.width >= 768) {
+    device = "T";
+  }
+
   let img = localStorage.getItem("BG");
   let quote = localStorage.getItem("quote");
   let id = localStorage.getItem("id");
-
   let list = JSON.parse(localStorage.getItem("favorites"));
-  let index = list.findIndex((item) => item[2]===id);
+  let index = list.findIndex((item) => item[2] === id);
 
   if (index != null && index >= 0) {
     list.splice(index, 1);
     localStorage.setItem("favorites", JSON.stringify(list));
     ShowSnackBar("Removed from the bookmarkes");
   } else {
-    list.push([img, quote, id]);
+    list.push([img, quote, id, device]);
     localStorage.setItem("favorites", JSON.stringify(list));
     ShowSnackBar("Bookmarked");
   }

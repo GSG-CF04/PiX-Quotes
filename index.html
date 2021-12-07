@@ -45,18 +45,21 @@
       as="font"
       type="font/woff"
     />
+    <link rel="preload" href="assets/imgs/abstract.jpg" as="image" />
+    <link rel="preload" href="assets/imgs/nature.jpg" as="image" />
+    <link rel="preload" href="assets/imgs/minimal.jpg" as="image" />
+    <link rel="preload" href="assets/imgs/cosmo.jpg" as="image" />
     <!-- import stylesheet & fonts -->
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/index.css" />
     <title>Home</title>
   </head>
   <body>
-  
-      <header>
-        <img id="logo" src="assets/imgs/logo.svg" alt="Logo" />
-        <p class="sub-title">The home of wallpapers</p>
-      </header>
-    
+    <header>
+      <img id="logo" src="assets/imgs/logo.svg" alt="Logo" />
+      <p class="sub-title">The home of wallpapers</p>
+    </header>
+
     <div class="navbar">
       <button class="navbar-btns" onclick="location.href='index.html'">
         Home
@@ -69,10 +72,10 @@
       </button>
     </div>
     <div class="category">
-      <button id="abstract-btn"  type="submit">Abstract</button>
-      <button id="nature-btn"  type="submit">Nature</button>
-      <button id="cosmo-btn"  type="submit">Cosmo</button>
-      <button id="minimal-btn"  type="submit">Minimal</button>
+      <button id="abstract-btn" type="submit">Abstract</button>
+      <button id="nature-btn" type="submit">Nature</button>
+      <button id="cosmo-btn" type="submit">Cosmo</button>
+      <button id="minimal-btn" type="submit">Minimal</button>
     </div>
     <footer>
       <button onclick="location.href='index.html'">
@@ -97,7 +100,7 @@
         />
       </button>
     </footer>
-  
+
     <script src="js/index.js"></script>
   </body>
 </html>

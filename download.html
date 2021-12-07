@@ -22,28 +22,28 @@
       crossorigin
     />
     <link
-    rel="preload"
-    href="assets/fonts/Futura-Bold.woff2"
-    as="font"
-    type="font/woff2"
-    crossorigin
-  />
-  <link
-    rel="preload"
-    href="assets/fonts/Futura-Bold.woff"
-    as="font"
-    type="font/woff"
-    crossorigin
-  />
+      rel="preload"
+      href="assets/fonts/Futura-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Futura-Bold.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
     <!-- import stylesheet & fonts -->
-    <link rel="stylesheet" href="css/fonts.css" crossorigin/>
+    <link rel="stylesheet" href="css/fonts.css" crossorigin />
     <link rel="stylesheet" href="css/download.css" />
     <title>Download</title>
   </head>
   <body>
     <footer>
       <div class="secondary-btns" style="display: none">
-        <button class="re-btn" id="reText-btn" onclick="reGenerateQuotation()">
+        <button class="re-btn" id="reText-btn"">
           Text
         </button>
         <button class="re-btn" id="reImg-btn" onclick="reGenerateImage()">
@@ -52,6 +52,20 @@
         <button class="re-btn" id="reAll-btn" onclick="reGenerateAll()">
           Both
         </button>
+      </div>
+      <!-- Add Modal Box Section -->
+      <div class="modal" id="modal">
+        <div class="modal-header">
+          <p class="modal-title">Write Your Quote</p>
+          <button class="close-btn">X</button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <input type="text" id="quotation" class="quotation" />
+            <button id="Random-quote"  onclick="reGenerateQuotation()">Random Quote</button>
+            <input id="submit-quote-button" type="submit" />
+          </form>
+        </div>
       </div>
 
       <div class="main-btns">

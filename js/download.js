@@ -248,3 +248,50 @@ console.log(localStorage.getItem("quote").length)
 if (localStorage.getItem("quote").length == 0) {
    re_btn.innerHTML = '<img src="assets/icons/plus.svg" />'
 }
+
+
+
+// **** open and close modal box ****
+
+let close = document.getElementsByClassName("close-btn")[0];
+let modal = document.getElementById("modal");
+let overlay = document.getElementById("overlay");
+
+// open
+
+let open = document.getElementById("reText-btn");
+
+open.addEventListener("click", openFun);
+
+function openFun() {
+    modal.style.display = "block";
+    overlay.style.opacity = 1;
+}
+
+// close
+
+close.addEventListener("click", closeFun);
+
+function closeFun() {
+    modal.style.display = "none";
+    overlay.style.opacity = 0;
+}
+
+
+let submitNewQuote = document.getElementById('submit-quote-button')
+let quoteInput = document.getElementById('quotation')
+console.log(quoteInput.value)
+
+submitNewQuote.addEventListener('click',function(){
+
+
+
+    localStorage.setItem("quote", quoteInput.value);
+
+// generate new ID
+let id = new Date().valueOf();
+localStorage.setItem("id", id);
+
+canvas.remove(); // remove the old canvas
+CreateCanvasWithImageAndQuote(); // build new canvas
+})

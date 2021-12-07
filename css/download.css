@@ -138,3 +138,77 @@ button:hover {
     opacity: 0;
   }
 }
+
+/* --------------------- Modal Box Style ----------------------*/
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 200ms ease-in-out;
+  border: none;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #fff;
+  width: 600px;
+  max-width: 80%;
+  height: 185px;
+  display: none;
+}
+
+#modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.modal-header .close-btn {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+}
+
+input.quotation {
+  width: 90%;
+  height: 33px;
+  display: inline-block;
+  margin: 10px 16px;
+  border: #aaaaaa 1px solid;
+  padding-left: 15px;
+  border-radius: 11px;
+}
+
+input[type="submit"] {
+  font-family: "Futura Medium";
+  width: 80px;
+  height: 36px;
+  border-radius: 11px;
+  background: #b96a6a;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  transition: 0.3s;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  float: right;
+  margin: 19px 18px;
+}
+
+#Random-quote {
+  min-width: max-content;
+  border-radius: 11px;
+  height: 35px;
+  border: none;
+}

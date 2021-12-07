@@ -45,6 +45,7 @@ header .logo-img {
     justify-items: center;
     justify-content: space-evenly;
     margin-top: -20%;
+    margin-bottom: 80pxg;
 }
     /*------------end of grid styling--------------- */
 
@@ -112,12 +113,13 @@ footer img{
     .my-collection{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 20px;
+        row-gap: 15px;
         align-items: stretch;
         justify-items: center;
         justify-content: space-evenly;
         margin: 35px;
         margin-top: -45px;
+       
     }
     .my-imgs{
         width: 220px;

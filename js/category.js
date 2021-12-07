@@ -7,7 +7,7 @@ if (window.screen.width >= 1024) {
 } else if (window.screen.width >= 768) {
     myDevice = "T";
 }
-console.log(myDevice)
+
 
 // fetching images from api according to categories
 
@@ -34,7 +34,7 @@ body.appendChild(cards)
 fetch(`https://imageforfinal.000webhostapp.com/api/api.php?cate=${category}&dev=${myDevice}`)
     .then(res => res.json())
     .then(data => {
-        for (let i = 0; i < 12 ; i++) {
+        for  (let i = 0; i < 12 && i<data.length; i++) {
             const dev = document.createElement("div");
             cards.appendChild(dev);
             dev.classList.add("images")

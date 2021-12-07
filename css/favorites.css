@@ -36,15 +36,6 @@ header .logo-img {
   border-radius: 11px;
 }
 
-/*------------grid styling--------------- */
-#my-collection {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  row-gap: 20px;
-  align-items: stretch;
-  justify-items: center;
-  justify-content: space-evenly;
-}
 /*------------end of grid styling--------------- */
 
 footer {
@@ -60,7 +51,7 @@ footer {
 }
 
 footer img {
-  height: 35px;
+  height: 30px;
 }
 
 .nav {
@@ -81,6 +72,7 @@ footer img {
   color: black;
   font-family: "Futura Bold";
   margin: 10px;
+  cursor: pointer;
 }
 
 .nav-btns:nth-child(3) {
@@ -97,11 +89,11 @@ footer img {
 }
 
 #cards-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  gap: 20px;
-  padding: 15px;
+  justify-content: space-evenly;
+  margin-bottom: 110px;
 }
 
 .card {
@@ -110,8 +102,10 @@ footer img {
   background-color: #f1f1f1;
   border-radius: 15px;
   max-height: fit-content;
-  margin: 0 auto;
   cursor: pointer;
+  cursor: pointer;
+  border-radius: 11px;
+  margin-top: 35px;
 }
 
 .card-img {
@@ -127,6 +121,7 @@ footer img {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  max-width: fit-content;
 }
 
 .container {
@@ -176,20 +171,24 @@ li:nth-child(1) {
   justify-content: center;
 }
 
+.tabs-btn {
+  display: none;
+  width: 90px;
+  height: 35px;
+  border: none;
+  background-color: #b9b9b9;
+  border-radius: 13px;
+  color: black;
+  font-family: "Futura Bold";
+  margin: 10px;
+  cursor: pointer;
+}
+
 /* tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
   .tabs-btn {
     display: inline-block;
-    width: 90px;
-    height: 35px;
-    border: none;
-    background-color: #b9b9b9;
-    border-radius: 13px;
-    color: black;
-    font-family: "Futura Bold";
-    margin: 10px;
   }
-
   .tabs-btn:nth-child(2) {
     background-color: #b96a6a;
     color: white;
@@ -218,16 +217,6 @@ li:nth-child(1) {
     display: inline-block;
   }
 
-  #my-collection {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 20px;
-    align-items: stretch;
-    justify-items: center;
-    justify-content: space-evenly;
-    margin: 100px;
-    margin-top: 30px;
-  }
   footer {
     display: none;
   }
@@ -238,34 +227,20 @@ li:nth-child(1) {
 @media (min-width: 1023px) {
   .tabs-btn {
     display: inline-block;
-    width: 90px;
-    height: 35px;
-    border: none;
-    background-color: #b9b9b9;
-    border-radius: 13px;
-    color: black;
-    font-family: "Futura Bold";
-    margin: 10px;
   }
-
   .tabs-btn:nth-child(3) {
     background-color: #b96a6a;
     color: white;
   }
-
-  #cards-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
   .card-img {
-    width: 230px;
+    width: 270px;
   }
   header {
     width: 100%;
     align-items: center;
   }
   p {
-    font-size: 20px;
+    font-size: 15px;
   }
   #logo-img {
     width: 20%;
@@ -275,17 +250,6 @@ li:nth-child(1) {
   }
   .nav-btns {
     display: inline-block;
-  }
-
-  #my-collection {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 20px;
-    align-items: stretch;
-    justify-items: center;
-    justify-content: space-evenly;
-    margin: 130px;
-    margin-top: 30px;
   }
 
   footer {

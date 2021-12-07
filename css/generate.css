@@ -30,11 +30,18 @@ main {
   padding: 20px;
 }
 
-#wallpaper-sample {
+#wallpaper-sample-mobile,
+#wallpaper-sample-tablet,
+#wallpaper-sample-desktop {
   width: 130px;
   border-radius: 13px;
   border: 7px solid #b96a6a;
   box-shadow: 0px 0px 20px#03030330;
+}
+
+#wallpaper-sample-tablet,
+#wallpaper-sample-desktop {
+  display: none;
 }
 
 #quote-input {
@@ -126,10 +133,15 @@ footer > button {
   .navbar-btns {
     display: inline-block;
   }
-  #wallpaper-sample {
+  #wallpaper-sample-tablet {
+    display: block;
     width: 350px;
-    height: 197px;
+    height: 270px;
     object-fit: cover;
+  }
+  #wallpaper-sample-desktop,
+  #wallpaper-sample-mobile {
+    display: none;
   }
   footer {
     display: none;
@@ -152,9 +164,14 @@ footer > button {
   .navbar-btns {
     display: inline-block;
   }
-  #wallpaper-sample {
-    width: 350px;
-    height: 197px;
+  #wallpaper-sample-mobile,
+  #wallpaper-sample-tablet {
+    display: none;
+  }
+  #wallpaper-sample-desktop {
+    display: block;
+    width: 400px;
+    height: 210px;
     object-fit: cover;
   }
   footer {

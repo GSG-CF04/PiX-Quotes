@@ -101,6 +101,7 @@ function navigateToDownload(id) {
 
   localStorage.setItem("BG", favoritesList[index][0]);
   localStorage.setItem("quote", favoritesList[index][1]);
+  localStorage.setItem("id", id);
 
   location.href = "download.html";
 }
@@ -121,6 +122,12 @@ function Tabs(tabNum) {
     tabletNav.style = "color: black !important; background-color: #b9b9b9;";
     mobileNav.style = "color: white !important; background-color: #b96a6a;";
 
+    let cardImg = document.querySelectorAll(".card-img");
+
+    for (i = 0; i < cardImg.length; i++) {
+      cardImg[i].style = "width: 140px !important;";
+    }
+
     desktopFooter.style =
       "color: white !important; background-color: transparent;";
     tabletFooter.style =
@@ -133,6 +140,12 @@ function Tabs(tabNum) {
     desktopNav.style = "color: black !important; background-color: #b9b9b9;";
     tabletNav.style = "color: white !important; background-color: #b96a6a;";
     mobileNav.style = "color: black !important; background-color: #b9b9b9;";
+
+    let cardImg = document.querySelectorAll(".card-img");
+
+    for (i = 0; i < cardImg.length; i++) {
+      cardImg[i].style = "width: 190px !important;";
+    }
 
     desktopFooter.style =
       "color: white !important; background-color: transparent;";

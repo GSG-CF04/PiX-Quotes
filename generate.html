@@ -71,14 +71,28 @@
 
       <main>
         <img
-          id="wallpaper-sample"
+          id="wallpaper-sample-mobile"
           src="assets/imgs/sample.png"
+          alt="wallpaper sample"
+        />
+        <img
+          id="wallpaper-sample-tablet"
+          src="assets/imgs/sample-desktop-tablet.jpg"
+          alt="wallpaper sample"
+        />
+        <img
+          id="wallpaper-sample-desktop"
+          src="assets/imgs/sample-desktop.jpg"
           alt="wallpaper sample"
         />
 
         <input type="text" id="quote-input" placeholder="Enter Your quote" />
 
-        <button id="generate-btn" type="submit" onclick="generateRandomImageAndQuote()">
+        <button
+          id="generate-btn"
+          type="submit"
+          onclick="generateRandomImageAndQuote()"
+        >
           Generate
         </button>
       </main>

@@ -4,11 +4,11 @@
   box-sizing: border-box;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    background-color: #D9D9D9;
-    flex-wrap: wrap;
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #d9d9d9;
+  flex-wrap: wrap;
 }
 /* Header */
 
@@ -20,215 +20,179 @@ header {
 }
 /* category buttons */
 .category {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  width: auto;
+  height: 150px;
+  justify-content: space-around;
+}
+#abstract-btn,
+#nature-btn,
+#cosmo-btn,
+#minimal-btn {
+  width: 145px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+}
+#abstract-btn {
+  background: url("../assets/imgs/abstract.jpg");
+  background-size: 100%;
+  background-position: 50%;
+}
 
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    flex-wrap: wrap;
-    width: auto;
-    height: 150px;
-    justify-content: space-around;
+#nature-btn {
+  background: url("../assets/imgs/nature.jpg");
+  background-size: 100%;
+  background-position: 50%;
 }
-#abstract-btn{
-    width: 145px;
-    height: 50px;
-   
-    background:url("../assets/imgs/abstract.jpg") ;
-    background-size: 100% ;
-    background-position: 50%;
-    color: white;
-    font-size: 20px ;
-    cursor: pointer;
-    border : none ;
-    border-radius : 15px;
+#cosmo-btn {
+  background: url("../assets/imgs/cosmo.jpg");
+  background-size: 100%;
+  background-position: 50%;
 }
-
-#nature-btn{
-    width: 145px;
-    height: 50px;
-    background:url("../assets/imgs/nature.jpg") ;
-    background-size:100%;
-    background-position: 50%;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    border : none ;
-    border-radius : 15px;
-}
-#cosmo-btn{
-    width: 145px;
-    height: 50px;
-    
-    background:url("../assets/imgs/cosmo.jpg") ;
-    background-size:100%;
-    background-position: 50%;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    border : none ;
-    border-radius : 15px;
-}
-#minimal-btn{
-    width: 140px;
-    height: 50px;
-    background:url("../assets/imgs/minimal.jpg") ;
-    background-size:100%;
-    background-position: 50%;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    border : none ;
-    border-radius : 15px;
+#minimal-btn {
+  background: url("../assets/imgs/minimal.jpg");
+  background-size: 100%;
+  background-position: 50%;
 }
 /* random image from api */
 .randomImage {
-    width: 140px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 11px;
-    margin-top: 35px;
-
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 11px;
+  margin-top: 35px;
 }
 .cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; 
-    margin-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 80px;
 }
 
-
 button:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
 
 /*---------- Nav Bar ---------- */
 .navbar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: #cecece;
-    margin: 10px 0px;
-  }
-  
-  .navbar-btns {
-    display: none;
-    width: 90px;
-    height: 35px;
-    border: none;
-    background-color: #b9b9b9;
-    border-radius: 13px;
-    color: black;
-    font-family: "Futura Bold";
-    margin: 10px;
-  }
-  
-  .navbar-btns:nth-child(1) {
-    background-color: #b96a6a;
-    color: white;
-  }
-  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #cecece;
+  margin: 10px 0px;
+}
+
+.navbar-btns {
+  display: none;
+  width: 90px;
+  height: 35px;
+  border: none;
+  background-color: #b9b9b9;
+  border-radius: 13px;
+  color: black;
+  font-family: "Futura Bold";
+  margin: 10px;
+}
+
+.navbar-btns:nth-child(1) {
+  background-color: #b96a6a;
+  color: white;
+}
+
 /*---------- footer ---------- */
 
 footer {
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    display: flex;
-    background-color: #b96a6a;
-    height: 60px;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 22px 22px 0px 0px;
-    
-  }
-  
-  .footer-btns {
-    height: 30px;
-  }
-  
-  footer > button {
-    background-color: transparent;
-    border: 0;
-  }
-  
-  /* --------------- 2-1 Tablet Size --------------- */
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-   
-    
-    header {
-      width: 100%;
-      align-items: center;
-    }
-    #logo {
-      width: 260px;
-    }
-    .sub-title {
-      font-size: 20px;
-    }
-    .category {
-      justify-content: space-evenly;
-  }
-   
-    .navbar-btns {
-      display: inline-block;
-    }
-    .randomImage {
-      width: 220px;
-    }
-    
-    
-    footer {
-      display: none;
-    }
-  }
-  
-  /* --------------- 2-2 Desktop Size --------------- */
-  
-  @media (min-width: 1023px) {
-
-    header {
-      width: 100%;
-      align-items: center;
-    }
-    #logo {
-      width: 20%;
-    }
-    .sub-title {
-      font-size: 20px;
-    }
-    .category {
-      justify-content: space-evenly;
-  }
-    #cosmo-btn{
-      width: 236px;
-      height: 61px; 
-    }
-    #abstract-btn{ 
-      width: 236px;
-      height: 61px; 
-    }
-    #nature-btn{ 
-      width: 236px;
-      height: 61px; 
-    }
-    #minimal-btn{
-      width: 236px;
-      height: 61px; 
-    }
-    .navbar-btns {
-      display: inline-block;
-    }
-   
-.cards{
-  margin-top:0px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  background-color: #b96a6a;
+  height: 60px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 22px 22px 0px 0px;
 }
+
+.footer-btns {
+  height: 30px;
+}
+
+footer > button {
+  background-color: transparent;
+  border: 0;
+}
+
+/* --------------- 2-1 Tablet Size --------------- */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    width: 100%;
+    align-items: center;
+  }
+  #logo {
+    width: 260px;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+  .category {
+    justify-content: space-evenly;
+    height: 80px;
+  }
+
+  .navbar-btns {
+    display: inline-block;
+  }
+  .randomImage {
+    width: 220px;
+  }
+
+  footer {
+    display: none;
+  }
+}
+
+/* --------------- 2-2 Desktop Size --------------- */
+
+@media (min-width: 1023px) {
+  header {
+    width: 100%;
+    align-items: center;
+  }
+  #logo {
+    width: 20%;
+  }
+  .sub-title {
+    font-size: 20px;
+  }
+  .category {
+    justify-content: space-evenly;
+    height: 80px;
+  }
+  #cosmo-btn,
+  #abstract-btn,
+  #nature-btn,
+  #minimal-btn {
+    width: 190px;
+    height: 57px;
+  }
+  .navbar-btns {
+    display: inline-block;
+  }
+
   .randomImage {
     width: 320px;
   }
-    
-    footer {
-      display: none;
-    }
+
+  footer {
+    display: none;
   }
+}

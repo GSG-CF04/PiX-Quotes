@@ -242,3 +242,9 @@ function ShowSnackBar(msg) {
     x.className = x.className.replace("show", "");
   }, 3000);
 }
+
+
+console.log(localStorage.getItem("quote").length)
+if (localStorage.getItem("quote").length == 0) {
+   re_btn.innerHTML = '<img src="assets/icons/plus.svg" />'
+}

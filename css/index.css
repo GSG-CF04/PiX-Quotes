@@ -1,3 +1,9 @@
+* {
+  font-family: "Futura Medium";
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -5,15 +11,12 @@ body{
     flex-wrap: wrap;
 }
 /* Header */
-#appsicon {
-    width: 250px;
-    margin-top: 40px;
-    margin-left: 20px;
-}
-h2{
-    font-family: Futura Medium;
-    margin-left: 20px;
-    font-size: 20px;
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 20px 10px;
 }
 /* category buttons */
 .category {
@@ -23,7 +26,7 @@ h2{
     margin-top: 50px;
     flex-wrap: wrap;
     width: auto;
-    height: 200px;
+    height: 150px;
     justify-content: space-around;
 }
 #abstract-btn{
@@ -43,7 +46,6 @@ h2{
 #nature-btn{
     width: 145px;
     height: 50px;
-    
     background:url("../assets/imgs/nature.jpg") ;
     background-size:100%;
     background-position: 50%;
@@ -155,10 +157,27 @@ footer {
   @media (min-width: 768px) and (max-width: 1023px) {
    
     
+    header {
+      width: 100%;
+      align-items: center;
+    }
+    #logo {
+      width: 260px;
+    }
+    .sub-title {
+      font-size: 20px;
+    }
+    .category {
+      justify-content: space-evenly;
+  }
    
     .navbar-btns {
       display: inline-block;
     }
+    .randomImage {
+      width: 220px;
+    }
+    
     
     footer {
       display: none;
@@ -169,11 +188,45 @@ footer {
   
   @media (min-width: 1023px) {
 
-  
- 
+    header {
+      width: 100%;
+      align-items: center;
+    }
+    #logo {
+      width: 20%;
+    }
+    .sub-title {
+      font-size: 20px;
+    }
+    .category {
+      justify-content: space-evenly;
+  }
+    #cosmo-btn{
+      width: 236px;
+      height: 61px; 
+    }
+    #abstract-btn{ 
+      width: 236px;
+      height: 61px; 
+    }
+    #nature-btn{ 
+      width: 236px;
+      height: 61px; 
+    }
+    #minimal-btn{
+      width: 236px;
+      height: 61px; 
+    }
     .navbar-btns {
       display: inline-block;
     }
+   
+.cards{
+  margin-top:0px;
+}
+  .randomImage {
+    width: 320px;
+  }
     
     footer {
       display: none;
